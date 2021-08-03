@@ -17,14 +17,6 @@ class ProfileScreen extends Component{
           imagePresent: false
         };
       }
- 
-    showItems(){
-      return(
-      <View>
-        <Text>Helooooooooo</Text>
-      </View>
-      )
-    }
       
     render(){
        return(
