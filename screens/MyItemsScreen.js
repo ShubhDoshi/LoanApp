@@ -106,7 +106,6 @@ export function deleteItem(URIs,deleteComplete){
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      // justifyContent: "center",
       alignContent: "center"
     },
     dashboard:{
