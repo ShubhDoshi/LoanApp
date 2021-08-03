@@ -8,3 +8,10 @@ LoanApp is an android app for people living in any residential domain like a soc
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<img src="https://github.com/ShubhDoshi/LoanApp/blob/67c53204d70138df066815b5c1b6e86a68e6e0fb/Sample%20Screens/MyItems.jpeg" alt="drawing" width="250" height="500"/>
 </p>
+
+## Features
+
+LoanApp helps to find the product by providing the description, cost and image. 
+It allows users to store their items under their profile.
+It provides real-time information about available items and description of the same.
+
