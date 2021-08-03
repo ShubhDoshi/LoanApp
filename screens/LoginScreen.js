@@ -6,11 +6,9 @@ import {View,Text,StyleSheet,Button} from "react-native";
 import * as GoogleSignIn from 'expo-google-sign-in';
 import ExpoStatusBar from "expo-status-bar/build/ExpoStatusBar";
 import firebase from 'firebase';
-//import * as Google from 'expo-google-sign-in';
+
 import * as Expo from 'expo-google-app-auth'
-//import firebase from '../firebase';
-//import * as Expo from 'expo';
-//var userDatabase = firebase.firestore().collection("users");
+
 class LoginScreen extends Component{
   isUserEqual=(googleUser, firebaseUser)=> {
     if (firebaseUser) {
@@ -92,8 +90,6 @@ class LoginScreen extends Component{
         try {
           const result = await Expo.logInAsync({
             androidClientId: '134115365787-jbbi12aj2r5e342fc7ddp3oqgdvq5hds.apps.googleusercontent.com',
-            //androidClientId: '134115365787-422o7i3kc9pru0v224bj446sqmf1mp92.apps.googleusercontent.com',
-            //iosClientId: YOUR_CLIENT_ID_HERE,
             scopes: ['profile', 'email'],
           });
       
@@ -108,23 +104,6 @@ class LoginScreen extends Component{
           return { error: true };
         }
       }
-      /*signInWithGoogleAsync=async()=>{
-        console.log('Trying google sign in')
-          try{
-              const result=await Google.logInAsync({
-                  androidClientId: '134115365787-mh7gm11jm7g56jhvuknitvf1s79q1vd3.apps.googleusercontent.com',
-                  scopes:['profile','email'],
-              });
-              if(result.type ==='success'){
-                return result.accessToken;
-              }else{
-                return {cancelled:true};
-              }
-          }catch(e){
-            console.log(e);
-            return{error:true};
-          }
-      };*/
     render(){
        return(
            <View style = {styles.container}>
