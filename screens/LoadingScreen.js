@@ -4,7 +4,7 @@ import {
 } from 'react-native';
 import firebase from 'firebase';
 
-//import firebase from '../firebase';
+
 class LoadingScreen extends Component{
     componentDidMount(){
         this.checkIfLoggedIn();
