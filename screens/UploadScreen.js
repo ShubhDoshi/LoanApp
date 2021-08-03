@@ -106,13 +106,9 @@ class UploadScreen extends Component{
     }
   };
   upload = (image,item,cost) => {
-      //alert(this.itemName);
-      //alert(this.price);
       alert("Item uploaded");
     Fire.shared.addPhoto(image,item,cost).then(()=>{
       setImage(null)
-      
-
     })
     .catch(err=>{
       console.log(err.message)
@@ -127,27 +123,16 @@ class UploadScreen extends Component{
 renderElement(){
     if(this.image === null){
         alert("Select image");
-        //this.renderElement();
     }
     else if(this.itemName===undefined){
         alert("Enter item name");
-        //this.renderElement();
-
     }
     else if(this.price===undefined){
         alert("Enter price of item");
-        //this.renderElement();
     }
     return null;
  }
  
- /*render() {
-     return (   
-         <View style={styles.container}>
-             { this.renderElement() }
-         </View>
-     )
- }*/
   _maybeRenderImage = () => {
     let {
       image
@@ -211,9 +196,6 @@ renderElement(){
       if (!pickerResult.cancelled) {
         this.setState({ image: pickerResult.uri });
       }
-
-      //this.uploadImageAsync(pickerResult.uri);
-      //console.log(pickerResult.uri);
     }
   };
 
@@ -234,44 +216,9 @@ renderElement(){
       if (!pickerResult.cancelled) {
         this.setState({ image: pickerResult.uri});
       }
-      //this.image=pickerResult.uri;
-      //this.uploadImageAsync(pickerResult.uri);
+      
     }
   };
-
- /*uploadImageAsync(pictureuri) {
-  let apiUrl = 'http://123.123.123.123/ABC';
-
-
-
-    var data = new FormData();  
-    data.append('file', {  
-      uri: pictureuri,
-      name: 'file',
-      type: 'image/jpg'
-    })
-
-    fetch(apiUrl, {  
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'multipart/form-data'
-      },
-      method: 'POST',
-      body: data
-    }).then(
-      response => {
-        console.log('succ ')
-        console.log(response)
-      }
-      ).catch(err => {
-      console.log('err ')
-      console.log(err)
-    } )
-
-
-
-
-  }*/
 
 }
 export default UploadScreen;
