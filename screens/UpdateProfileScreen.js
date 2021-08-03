@@ -16,7 +16,6 @@ class UpdateProfileScreen extends Component{
     setPhone(text){
         this.state.phone=text;
         newContact=text;
-        //alert(text);
     };
     updateProfileItems(text){
         let UID = firebase.auth().currentUser.uid;
@@ -65,11 +64,9 @@ export default UpdateProfileScreen;
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      // justifyContent: "center",
       alignContent: "center"
     },
     infoContainer: {
-      // flex: 1,
       top: 20,
       justifyContent: "center",
       alignContent: "center",
