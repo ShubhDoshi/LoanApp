@@ -7,7 +7,6 @@ import * as ImagePicker from 'expo-image-picker';
 import UserPermissions from '../Utilities/UserPermissions';
 import { PermissionsAndroid } from 'react-native';
 import LineSeparator from "../components/LineSeparator";
-//import { Header } from "react-native/Libraries/NewAppScreen";
 import {Name,emailID,imageURL,RollNo,URIs,contactNo} from './DashboardScreen'; 
 import ProfileItems from "../components/ProfileItems";
 class ProfileScreen extends Component{
@@ -18,31 +17,7 @@ class ProfileScreen extends Component{
           imagePresent: false
         };
       }
-    
-
-    
-      
-       
-    /*pickImage = async () => {
-        let result = await ImagePicker.launchImageLibraryAsync({
-          mediaTypes: ImagePicker.MediaTypeOptions.All,
-          allowsEditing: true,
-          aspect: [4, 3],
-          quality: 1,
-        });
-    
-        console.log(result);
-    
-        if (!result.cancelled) {
-          this.state.image=result.uri;
-        }
-        console.log(this.state.image);
-        if(this.state.image==null){
-            alert("hello");
-        }
-      };*/
-    
-      
+ 
     showItems(){
       return(
       <View>
@@ -52,11 +27,7 @@ class ProfileScreen extends Component{
     }
       
     render(){
-        //this.getData();
        return(
-         
-         
-           
                 <SafeAreaView style={styles.container}>
                   <View
           style={{
@@ -148,7 +119,6 @@ const styles = StyleSheet.create({
         flex: 1,
         height: undefined,
         width: undefined,
-        // backgroundColor: "black",
         resizeMode: "stretch"
       },
       profileImage: {
