@@ -49,7 +49,6 @@ class Fire{
         return Date.now()
     }
     
-    
 }
 
 Fire.shared=new Fire();
