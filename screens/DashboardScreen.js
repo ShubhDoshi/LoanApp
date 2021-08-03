@@ -31,14 +31,6 @@ class DashboardScreen extends Component{
             i[4].toLowerCase().includes(textToSearch.toLowerCase()),),
         });
       }
-      /*getItems=()=>{
-        //alert(this.state.imagePresent);
-        console.log(this.state.imagePresent);
-        if(this.state.imagePresent==true){
-          
-        }
-        //alert(URIs);
-    }*/
     getData=()=>{
       console.log(allItems);
       URIs=[];
@@ -48,8 +40,6 @@ class DashboardScreen extends Component{
       snapshot.forEach((childSub) => {
         let key = childSub.key;
         let userList = childSub.val();
-        //console.log(userList);
-        //console.log(key);
         if(key=="photos"){
           this.state.imagePresent=true;
           let UID = firebase.auth().currentUser.uid;
@@ -73,7 +63,6 @@ class DashboardScreen extends Component{
         }
         if(key=="first_name"){
             Name=userList;
-            //console.log(Name);
         }
         else if(key=="contact_no"){
             contactNo=userList;
@@ -92,7 +81,6 @@ class DashboardScreen extends Component{
       });
     }
     componentDidMount(){
-      //this.getItems();
       this.getData();
       console.log(allItems);
   };
