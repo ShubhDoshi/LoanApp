@@ -1,25 +1,3 @@
-/*import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-
-const SplashScreen = ({navigation}) => {
-  return (
-    <View style={styles.container}>
-      <Text>"Splashhhh!"</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
-export default SplashScreen;*/
 import React,{Component} from 'react';
 import { 
     View, 
@@ -33,28 +11,18 @@ import * as Animatable from 'react-native-animatable';
 import {LinearGradient} from 'expo-linear-gradient';
 import firebase from 'firebase';
 import { render } from 'react-dom';
-//import {ArrowForwardIosIcon} from '@material-ui/icons/ArrowForwardIos';
-//import {LoginScreen} from './LoginScreen';
-//import {MaterialIcons} from 'react-native-vector-icons/MaterialIcons';
-//import { useTheme } from '@react-navigation/native';
 var allItems=[];
 var Name;
 var phone;
 class SplashScreen extends Component{
-    //const { colors } = useTheme();
     getAllItems=()=>{
       allItems=[];
-      //let UID = firebase.auth().currentUser.uid;
       firebase.database().ref('users/').on("value", snapshot =>{
           var i=0;
       snapshot.forEach((childSub1) => {
-        
         let UID= childSub1.key;
         firebase.database().ref('users/'+UID+'/').on("value", snapshot =>{
         snapshot.forEach((childSub2) => {
-        //console.log(userList);
-        //console.log(key);
-
         let key = childSub2.key;
         if(key=="first_name"){
           Name=childSub2.val();
